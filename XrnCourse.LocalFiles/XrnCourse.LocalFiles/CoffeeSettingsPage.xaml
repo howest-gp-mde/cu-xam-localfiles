@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XrnCourse.LocalFiles.CoffeeSettingsPage"
+             Title="Coffee settings (System.IO)">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView HasUnevenRows="True">
+                <TableSection Title="Configure your coffee">
+                    <EntryCell x:Name="txtCoffeeName" Label="Name your coffee:" Text="" />
+                    <SwitchCell x:Name="swHasSugar" Text="Sugar" On="False"  />
+                    <ViewCell>
+                        <StackLayout Padding="15">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Amount of milk" />
+                                <Label x:Name="lblMilkAmount" Text="" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" />
+                            </StackLayout>
+                            <Slider x:Name="sldMilkAmount" Maximum="4" Minimum="0" MinimumTrackColor="#aaaaaa" ValueChanged="SldMilkAmount_ValueChanged"></Slider>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Padding="15">
+                            <Label Text="Make coffee every day at" />
+                            <TimePicker x:Name="tpBrewTime" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableView>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnResetToDefaults" Text="Reset" Clicked="BtnResetToDefaults_Clicked"></Button>
+                <Button x:Name="btnSaveSettings" Text="Apply" Clicked="BtnSaveSettings_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    
