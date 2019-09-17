@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,17 +14,17 @@ namespace XrnCourse.LocalFiles
 
         private void BtnClearContents_Clicked(object sender, EventArgs e)
         {
-
+            txtContents.Text = "";
         }
 
         private void BtnLoadMemento_Clicked(object sender, EventArgs e)
         {
-
+            //todo: load contents from text file
         }
 
         private void BtnSaveMemento_Clicked(object sender, EventArgs e)
         {
-
+            //todo: save contents from text file
         }
     }
 }

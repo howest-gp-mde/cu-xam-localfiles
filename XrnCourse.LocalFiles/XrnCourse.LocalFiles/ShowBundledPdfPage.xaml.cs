@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,6 +14,9 @@ namespace XrnCourse.LocalFiles
 
         private void BtnLoadPdf_Clicked(object sender, EventArgs e)
         {
+            //todo: open packaged PDF stream using Xamarin.Essentials
+
+            //todo: update filesize
 
         }
     }
