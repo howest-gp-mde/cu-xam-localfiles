@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="XrnCourse.LocalFiles.CoffeeSettingsPage"
+             Appearing="ContentPage_Appearing"
              Title="Coffee settings (System.IO)">
     <ContentPage.Content>
         <StackLayout>
