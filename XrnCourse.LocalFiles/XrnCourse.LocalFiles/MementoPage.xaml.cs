@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,12 +20,17 @@ namespace XrnCourse.LocalFiles
 
         private void BtnLoadMemento_Clicked(object sender, EventArgs e)
         {
-            //todo: load contents from text file
+            string folder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            string fullPath = Path.Combine(folder, Constants.MementoFileName);
+            if (File.Exists(fullPath))
+                txtContents.Text = File.ReadAllText(fullPath);
         }
 
         private void BtnSaveMemento_Clicked(object sender, EventArgs e)
         {
-            //todo: save contents from text file
+            string folder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            string fullPath = Path.Combine(folder, Constants.MementoFileName);
+            File.WriteAllText(fullPath, txtContents.Text);
         }
     }
 }
